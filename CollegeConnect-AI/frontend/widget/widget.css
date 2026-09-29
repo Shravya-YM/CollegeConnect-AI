@@ -1,0 +1,333 @@
+/* CollegeConnect AI - VVCE Chatbot Widget Styles */
+:root {
+  --cc-primary: #1B365D;
+  --cc-primary-hover: #132742;
+  --cc-accent: #D4AF37;
+  --cc-bg: #FFFFFF;
+  --cc-bot-bubble: #F1F5F9;
+  --cc-bot-text: #1E293B;
+  --cc-user-bubble: #1B365D;
+  --cc-user-text: #FFFFFF;
+  --cc-border: #E2E8F0;
+  --cc-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#collegeconnect-widget-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999999;
+  font-family: var(--cc-font);
+}
+
+/* Floating Launcher Button */
+.cc-launcher-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--cc-primary);
+  color: #FFFFFF;
+  border: 2px solid var(--cc-accent);
+  box-shadow: 0 4px 20px rgba(27, 54, 93, 0.35);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+
+.cc-launcher-btn:hover {
+  transform: scale(1.06);
+  background: var(--cc-primary-hover);
+  box-shadow: 0 6px 24px rgba(27, 54, 93, 0.45);
+}
+
+.cc-launcher-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+/* Chat Window Box */
+.cc-chat-window {
+  display: none;
+  position: absolute;
+  bottom: 75px;
+  right: 0;
+  width: 380px;
+  height: 560px;
+  max-height: calc(100vh - 120px);
+  background: var(--cc-bg);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--cc-border);
+  flex-direction: column;
+  overflow: hidden;
+  animation: cc-fade-up 0.25s ease-out forwards;
+}
+
+.cc-chat-window.open {
+  display: flex;
+}
+
+@keyframes cc-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Header */
+.cc-header {
+  background: var(--cc-primary);
+  color: #FFFFFF;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--cc-accent);
+}
+
+.cc-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cc-avatar {
+  width: 38px;
+  height: 38px;
+  background: #FFFFFF;
+  color: var(--cc-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 15px;
+  border: 2px solid var(--cc-accent);
+}
+
+.cc-title-wrap {
+  line-height: 1.25;
+}
+
+.cc-title {
+  font-weight: 700;
+  font-size: 15px;
+  color: #FFFFFF;
+}
+
+.cc-subtitle {
+  font-size: 11px;
+  color: #CBD5E1;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cc-online-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22C55E;
+}
+
+.cc-header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.cc-header-btn {
+  background: transparent;
+  border: none;
+  color: #CBD5E1;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.cc-header-btn:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Chat Messages */
+.cc-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #FAFAFC;
+}
+
+.cc-msg {
+  max-width: 85%;
+  font-size: 13.5px;
+  line-height: 1.5;
+  border-radius: 12px;
+  padding: 10px 14px;
+  word-wrap: break-word;
+}
+
+.cc-msg.bot {
+  align-self: flex-start;
+  background: var(--cc-bot-bubble);
+  color: var(--cc-bot-text);
+  border: 1px solid var(--cc-border);
+  border-bottom-left-radius: 4px;
+}
+
+.cc-msg.user {
+  align-self: flex-end;
+  background: var(--cc-user-bubble);
+  color: var(--cc-user-text);
+  border-bottom-right-radius: 4px;
+}
+
+/* Source Citation Pills */
+.cc-sources {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed #CBD5E1;
+  font-size: 11px;
+}
+
+.cc-sources-title {
+  font-weight: 600;
+  color: #64748B;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+
+.cc-source-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #E2E8F0;
+  color: var(--cc-primary);
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 11px;
+  margin: 2px 4px 2px 0;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.cc-source-pill:hover {
+  background: #CBD5E1;
+  text-decoration: underline;
+}
+
+/* Starter Quick Chips */
+.cc-quick-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.cc-chip {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: var(--cc-primary);
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.cc-chip:hover {
+  background: #E8EEF5;
+  border-color: var(--cc-primary);
+}
+
+/* Input Area */
+.cc-input-wrap {
+  padding: 12px 14px;
+  background: #FFFFFF;
+  border-top: 1px solid var(--cc-border);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.cc-input {
+  flex: 1;
+  border: 1px solid var(--cc-border);
+  border-radius: 20px;
+  padding: 9px 14px;
+  font-size: 13.5px;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.cc-input:focus {
+  border-color: var(--cc-primary);
+}
+
+.cc-send-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--cc-primary);
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.cc-send-btn:hover {
+  background: var(--cc-primary-hover);
+}
+
+.cc-send-btn:disabled {
+  background: #CBD5E1;
+  cursor: not-allowed;
+}
+
+/* Typing cursor animation */
+.cc-cursor {
+  display: inline-block;
+  width: 4px;
+  height: 14px;
+  background: var(--cc-primary);
+  margin-left: 2px;
+  animation: cc-blink 0.8s infinite;
+  vertical-align: middle;
+}
+
+@keyframes cc-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  #collegeconnect-widget-container {
+    bottom: 16px;
+    right: 16px;
+  }
+  .cc-chat-window {
+    width: calc(100vw - 32px);
+    height: calc(100vh - 100px);
+    bottom: 70px;
+    right: 0;
+  }
+}

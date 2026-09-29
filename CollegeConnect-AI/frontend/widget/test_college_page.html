@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vidyavardhaka College of Engineering - Official Portal Mockup</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; color: #333; background: #F8FAFC; }
+    
+    /* Top Bar */
+    .top-bar { background: #132742; color: #CBD5E1; padding: 6px 40px; font-size: 13px; display: flex; justify-content: space-between; }
+    .top-bar a { color: #D4AF37; text-decoration: none; margin-left: 15px; }
+
+    /* Header */
+    header { background: #FFFFFF; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid #D4AF37; }
+    .logo-area { display: flex; align-items: center; gap: 15px; }
+    .logo-badge { width: 55px; height: 55px; background: #1B365D; color: #D4AF37; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; border: 2px solid #D4AF37; }
+    .college-name h1 { font-size: 20px; color: #1B365D; font-weight: 800; letter-spacing: 0.5px; }
+    .college-name p { font-size: 12px; color: #64748B; font-weight: 500; }
+
+    /* Navigation */
+    nav { background: #1B365D; padding: 0 40px; display: flex; gap: 25px; }
+    nav a { color: #FFFFFF; text-decoration: none; padding: 14px 0; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 3px solid transparent; transition: all 0.2s; }
+    nav a:hover, nav a.active { color: #D4AF37; border-bottom-color: #D4AF37; }
+
+    /* Hero Banner */
+    .hero { background: linear-gradient(135deg, #1B365D 0%, #2A4A7F 100%); color: #FFFFFF; padding: 60px 40px; text-align: center; }
+    .hero h2 { font-size: 32px; font-weight: 800; margin-bottom: 12px; color: #FFFFFF; }
+    .hero p { font-size: 16px; color: #E2E8F0; max-width: 750px; margin: 0 auto 24px; line-height: 1.6; }
+    .hero-btn { background: #D4AF37; color: #1B365D; padding: 12px 28px; border-radius: 25px; text-decoration: none; font-weight: 700; display: inline-block; transition: background 0.2s; }
+    .hero-btn:hover { background: #E5C358; }
+
+    /* Main Container */
+    .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+    .section-title { font-size: 24px; color: #1B365D; font-weight: 700; margin-bottom: 25px; border-left: 4px solid #D4AF37; padding-left: 12px; }
+
+    /* Cards Grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; margin-bottom: 40px; }
+    .card { background: #FFFFFF; border-radius: 12px; padding: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #E2E8F0; transition: transform 0.2s; }
+    .card:hover { transform: translateY(-4px); }
+    .card h3 { color: #1B365D; font-size: 17px; margin-bottom: 10px; }
+    .card p { font-size: 13.5px; color: #64748B; line-height: 1.5; }
+
+    /* Info Banner */
+    .info-banner { background: #E8EEF5; border-left: 4px solid #1B365D; padding: 20px; border-radius: 0 8px 8px 0; margin-bottom: 40px; }
+    .info-banner h4 { color: #1B365D; margin-bottom: 6px; font-size: 16px; }
+    .info-banner p { font-size: 14px; color: #334155; line-height: 1.5; }
+
+    /* Footer */
+    footer { background: #0F172A; color: #94A3B8; padding: 40px; text-align: center; font-size: 13px; margin-top: 60px; }
+    footer p { margin-bottom: 8px; }
+    footer a { color: #D4AF37; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div>Autonomous Institute affiliated to VTU, Belagavi | Approved by AICTE, New Delhi | Accredited by NAAC with 'A' Grade & NBA</div>
+    <div>
+      <a href="https://vvce.ac.in/contact-us/" target="_blank">Contact Us</a>
+      <a href="https://vvce.ac.in/admissions/" target="_blank">Admissions 2026</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-area">
+      <div class="logo-badge">VVCE</div>
+      <div class="college-name">
+        <h1>VIDYAVARDHAKA COLLEGE OF ENGINEERING</h1>
+        <p>Gokulam III Stage, Mysuru - 570 002, Karnataka, India</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#" class="active">Home</a>
+    <a href="https://vvce.ac.in/about/" target="_blank">About VVCE</a>
+    <a href="https://vvce.ac.in/admissions/" target="_blank">Admissions</a>
+    <a href="https://vvce.ac.in/cut-off-ranks/" target="_blank">Cut-Off Ranks</a>
+    <a href="https://vvce.ac.in/autonomous-scheme-syllabus/" target="_blank">Academics</a>
+    <a href="https://vvce.ac.in/contact-us/" target="_blank">Contact</a>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h2>Welcome to Vidyavardhaka College of Engineering</h2>
+    <p>Empowering the next generation of engineers, innovators, and leaders through academic excellence, cutting-edge research, and robust industry partnerships.</p>
+    <a href="https://vvce.ac.in/admissions/" class="hero-btn" target="_blank">Explore Admissions 2026</a>
+  </div>
+
+  <div class="container">
+    <div class="info-banner">
+      <h4>💡 CollegeConnect AI Virtual Assistant Live Test</h4>
+      <p>This mock page demonstrates the drop-in integration of the official VVCE chatbot widget. Look at the bottom-right corner to interact with the assistant, ask questions about courses, admissions, cutoffs, or test edge-case and out-of-scope probes.</p>
+    </div>
+
+    <h2 class="section-title">Academic Departments</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Computer Science & Engineering</h3>
+        <p>State-of-the-art computing labs, high placement records, and active research in Cloud Computing, Cyber Security, and Software Engineering.</p>
+      </div>
+      <div class="card">
+        <h3>Artificial Intelligence & ML</h3>
+        <p>Specialized focus on deep learning, neural networks, natural language processing, and data science for modern industry applications.</p>
+      </div>
+      <div class="card">
+        <h3>Information Science & Engg</h3>
+        <p>Comprehensive curriculum covering full-stack development, database systems, distributed architectures, and networking.</p>
+      </div>
+      <div class="card">
+        <h3>Electronics & Communication</h3>
+        <p>Cutting-edge VLSI, Embedded Systems, Signal Processing, and IoT laboratories preparing students for core hardware & telecom sectors.</p>
+      </div>
+      <div class="card">
+        <h3>Mechanical Engineering</h3>
+        <p>Advanced CAD/CAM, Robotics, Mechatronics, and thermal testing labs fostering manufacturing innovation and automotive design.</p>
+      </div>
+      <div class="card">
+        <h3>Civil Engineering</h3>
+        <p>Structural analysis, geotechnical testing, environmental engineering, and sustainable urban infrastructure development.</p>
+      </div>
+      <div class="card">
+        <h3>Master of Business Admin</h3>
+        <p>Premier management education focusing on Marketing, Finance, HR, and Business Analytics with strong corporate placements.</p>
+      </div>
+      <div class="card">
+        <h3>Basic Sciences & Humanities</h3>
+        <p>Departments of Physics, Chemistry, and Mathematics providing foundational rigor for all engineering disciplines.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Vidyavardhaka College of Engineering. All rights reserved.</p>
+    <p>Powered by <a href="#">CollegeConnect AI</a> - Official Autonomous College Chatbot Platform</p>
+  </footer>
+
+  <!-- EMBEDDABLE CHATBOT WIDGET INTEGRATION -->
+  <!-- Webmasters simply paste this script tag onto any college web page -->
+  <script
+    src="widget.js"
+    data-api-url="http://localhost:8000"
+    data-college-name="VVCE"
+    defer>
+  </script>
+
+</body>
+</html>
